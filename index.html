@@ -1,0 +1,145 @@
+Begin Patch
+*** Update File: index.html
+@@
+-<!DOCTYPE html>
+-<html lang="pt-BR">
+-<head>
+-    <meta charset="UTF-8">
+-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>Document</title>
+-</head>
+-<body>
+-    
+-</body>
+-</html>
++<!DOCTYPE html>
++<html lang="pt-BR">
++<head>
++    <meta charset="UTF-8">
++    <meta http-equiv="X-UA-Compatible" content="IE=edge">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Meu Portfólio — Felipe Silva</title>
++    <link rel="stylesheet" href="styles.css">
++</head>
++<body>
++  <header class="site-header">
++    <div class="container header-inner">
++      <div class="brand">
++        <h1>Felipe Silva</h1>
++        <p class="tag">Desenvolvedor(a) Web • Front-end • UI/UX</p>
++      </div>
++      <nav class="main-nav" id="mainNav">
++        <a href="#about">Sobre</a>
++        <a href="#skills">Habilidades</a>
++        <a href="#projects">Projetos</a>
++        <a href="#contact">Contato</a>
++      </nav>
++      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">☰</button>
++    </div>
++  </header>
++
++  <main>
++    <section class="hero">
++      <div class="container hero-inner">
++        <div class="hero-text">
++          <h2>Olá, eu sou <Felipe class="accent">Felipe</span></h2>
++          <p>Transformo ideias em experiências digitais elegantes e úteis. Trabalho com HTML, CSS e JavaScript para construir interfaces acessíveis e responsivas.</p>
++          <a class="btn" href="#projects">Ver Projetos</a>
++        </div>
++        <div class="hero-card">
++          <img src="https://via.placeholder.com/300x300.png?text=Foto+Pessoal" alt="Foto pessoal">
++        </div>
++      </div>
++    </section>
++
++    <section id="about" class="container about">
++      <h3>Sobre</h3>
++      <p>Sou um(a) desenvolvedor(a) com atenção a detalhes, apaixonado(a) por criar interfaces limpas e acessíveis. Tenho experiência em projetos pessoais e colaborativos, e gosto de aprender novas tecnologias.</p>
++      <ul>
++        <li><strong>Localização:</strong> Sua cidade, País</li>
++        <li><strong>Disponibilidade:</strong> Freelance / CLT</li>
++        <li><strong>Contato:</strong> seu.email@exemplo.com</li>
++      </ul>
++    </section>
++
++    <section id="skills" class="container skills">
++      <h3>Habilidades</h3>
++      <div class="skill-list">
++        <div class="skill">
++          <h4>HTML &amp; CSS</h4>
++          <p>Semântica, responsividade, layouts flex/grid, animações leves.</p>
++        </div>
++        <div class="skill">
++          <h4>JavaScript</h4>
+          <p>DOM, fetch, ES6+, bundlers simples e boas práticas.</p>
+        </div>
+       <div class="skill">
+          <h4>Design</h4>
+          <p>Prototipagem, UI, acessibilidade e boas práticas de usabilidade.</p>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="container projects">
+      <h3>Projetos</h3>
+      <div class="projects-grid">
+        <article class="project">
+          <h4>Projeto 1</h4>
+          <p>Landing page responsiva com foco em performance e SEO.</p>
+          <a href="#" class="project-link">Ver</a>
+        </article>
+        <article class="project">
+          <h4>Projeto 2</h4>
+          <p>App single-page com consumo de API pública e rotas.</p>
+          <a href="#" class="project-link">Ver</a>
+        </article>
+        <article class="project">
+          <h4>Projeto 3</h4>
+          <p>Pequena biblioteca de componentes acessíveis em Vanilla JS.</p>
+          <a href="#" class="project-link">Ver</a>
+        </article>
+      </div>
+    </section>
+    <section id="contact" class="container contact">
+      <h3>Contato</h3>
+      <p>Quer trabalhar comigo ou apenas dizer olá? Envie uma mensagem.</p>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <label for="name">Nome</label>
+        <input id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button class="btn" type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Nome Sobrenome — Portfólio</p>
+      <nav class="footer-nav">
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+ // Navegação simples para mobile
+    const navToggle = document.getElementById('navToggle');
+  const mainNav = document.getElementById('mainNav');
+    navToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+    });
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert('Obrigado! Sua mensagem foi enviada (simulação).');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
